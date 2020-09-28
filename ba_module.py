@@ -265,7 +265,7 @@ def forward_iterate3(Dnew, pplus_i, pplus_pi):
                 d = Dnew[ip, si, ai]
 
                 Dplus[i, si, ai] += d * pi
-                Dplus[i + 1, si, ai + 1] += d * (1 - pi)
+                Dplus[i + 1, si, ai] += d * (1 - pi)
 
     # second step: update using transpose of Markov matrix for exogenous state z
     # take Pi_T itself as input for memory efficiency
